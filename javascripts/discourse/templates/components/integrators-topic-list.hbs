@@ -1,5 +1,5 @@
 <div class="header-wrapper">
-    <h2>{{title}}</h2>
+    {{title}} <a href="{{moreHref}}" class="btn btn-more">{{i18n 'read_more'}}</a>
 </div>
 {{#conditional-loading-spinner condition=isLoading}}
 <table id="ember98" class="topic-list showThumbnail tiles-style showExcerpt showActions ember-view">
@@ -45,12 +45,6 @@
                         </div>
                         <a href="{{t.url}}"></a>
 
-                        {{#if t.hasExcerpt}}
-                        <a href='{{t.url}}'>
-                            {{raw "list/topic-excerpt" topic=t}}
-                        </a>
-                        {{/if}}
-
                         <div class="topic-meta">
                             <div class="topic-views {{t.viewsHeat}} inline sub">
                                 {{d-icon "far-eye"}}
@@ -72,4 +66,3 @@
     </tbody>
 </table>
 {{/conditional-loading-spinner}}
-<a href="{{moreHref}}" class="btn btn-more">{{i18n 'read_more'}}</a>

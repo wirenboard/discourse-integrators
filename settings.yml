@@ -9,9 +9,9 @@ category:
   description: "Выберите категорию"
 max_list_length:
   type: enum
-  default: 3
+  default: 4
   choices:
-    - 3
-    - 6
-    - 9
+    - 4
+    - 8
+    - 12
   description: "Сколько показывать в списке топиков?"
