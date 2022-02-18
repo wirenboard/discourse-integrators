@@ -37,4 +37,8 @@
     .integrators .topic-list-body {
         grid-template-columns: repeat(1, 1fr) !important;
     }
+
+    .integrators .topic-list-body .tiles-grid-item:not(:first-child) {
+        display: none;
+    }
 }
