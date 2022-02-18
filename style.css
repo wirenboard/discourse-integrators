@@ -1,0 +1,40 @@
+/* Add integrators support */
+.topic-list-body {
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-auto-rows: minmax(auto, auto) !important;
+    border: none !important;
+    margin-top: 25px;
+    gap: 20px !important;
+}
+
+.topic-list-body .tiles-grid-item.topic-list-item img.thumbnail {
+    height: 200px !important;
+}
+
+.topic-list-body .tiles-grid-item.topic-list-item .topic-category {
+    margin-top: 10px !important;
+}
+
+.topic-list-body .tiles-grid-item.topic-list-item .topic-details {
+    padding: 20px !important;
+}
+
+.topic-list-body .tiles-grid-item.topic-list-item .topic-meta {
+    margin-top: 8px;
+}
+
+.integrators {
+    margin-bottom: 25px;
+}
+
+.integrators .topic-list-body {
+    margin-top: 5px !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .topic-list-body,
+    .integrators .topic-list-body {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}
