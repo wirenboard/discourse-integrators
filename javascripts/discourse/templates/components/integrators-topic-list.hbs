@@ -1,5 +1,5 @@
 <div class="header-wrapper">
-    <h3>{{title}} <a href="{{moreHref}}">Смотреть все</a></h3>
+    <h4>{{title}} <a href="{{moreHref}}">Смотреть все</a></h4>
 </div>
 {{#conditional-loading-spinner condition=isLoading}}
 <table id="ember98" class="topic-list showThumbnail tiles-style showExcerpt showActions ember-view">
@@ -29,36 +29,8 @@
                                 <span class="topic-post-badges"></span>
                             </span>
                             </div>
-                            <div class="topic-users">
-                                <div class="inline">
-                                {{#each t.posters as |poster|}}
-                                    <a href="{{poster.user.path}}" data-user-card="{{poster.user.username}}" class="{{poster.extras}}">
-                                        {{avatar poster avatarTemplatePath="user.avatar_template" usernamePath="user.username" imageSize="small"}}
-                                    </a>
-                                {{/each}}
-                                </div>
-                            </div>
-
-                            <div class="topic-category">
-                                {{category-link t.category}}
-                            </div>
                         </div>
                         <a href="{{t.url}}"></a>
-
-                        <div class="topic-meta">
-                            <div class="topic-views {{t.viewsHeat}} inline sub">
-                                {{d-icon "far-eye"}}
-                                {{number t.views numberKey="views_long"}}
-                            </div>
-                            <span class="middot inline sub"></span>
-                            <div class="topic-replies posts-map inline sub" title="">
-                                <a href class="posts-map badge-posts">{{d-icon "far-comment"}}{{number t.replyCount}}</a>
-                            </div>
-                            <span class="middot inline sub"></span>
-                            <div class="{{class}} {{cold-age-class t.createdAt startDate=t.bumpedAt class=""}} activity inline sub" title="{{{t.bumpedAtTitle}}}">
-                                <a href="{{t.lastPostUrl}}">{{format-date t.bumpedAt format="medium-with-ago" noTitle="true"}}</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
